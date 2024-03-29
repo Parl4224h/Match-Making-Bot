@@ -1,3 +1,6 @@
+import {GuildMember} from "discord.js";
+import {ObjectId} from "mongoose";
+
 export interface InternalResponse {
     success: boolean;
     message: string;
@@ -12,4 +15,12 @@ export interface CommandPermission {
     limited: boolean;
     channel: boolean
 }
+
+export interface GameUser {
+    accepted: boolean;
+    discordMember: GuildMember;
+    dbID: ObjectId;
+    team: number;
+}
+
 

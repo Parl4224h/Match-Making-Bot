@@ -1,4 +1,5 @@
 import {Client} from "discord.js";
+import {GameUser} from "./interfaces/Internal";
 
 
 /**
@@ -19,5 +20,13 @@ export class Data {
 
     public setLoaded(state: boolean) {
         this.loaded = state;
+    }
+
+    public async getMessage(message: string): Promise<string> {
+        return "";
+    }
+
+    public async addAbandoned(users: GameUser[]) {
+        // TODO: add logic
     }
 }
