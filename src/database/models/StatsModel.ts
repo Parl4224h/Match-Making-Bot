@@ -6,6 +6,7 @@ export interface StatsInt extends Document {
     mmrHistory: number[];
     gamesPlayed: number;
     ratingChange: number;
+    rank: number;
     wins: number;
     losses: number;
     draws: number;
@@ -19,6 +20,7 @@ export const StatsSchema = new Schema({
     mmrHistory: [Number],
     gamesPlayed: Number,
     ratingChange: Number,
+    rank: Number,
     wins: Number,
     losses: Number,
     draws: Number,

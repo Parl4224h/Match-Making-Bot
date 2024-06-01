@@ -9,12 +9,16 @@ export default class {
         this.game = game;
     }
 
-    public next() {
-        this.game.next();
+    public async next() {
+        await this.game.next();
     }
 
     public async start() {
 
+    }
+
+    public async save() {
+        // TODO: do all saving of game state
     }
 
     public async tick() {
@@ -28,13 +32,20 @@ export default class {
     public async gameEnd() {
 
     }
-}
 
-export class voteStage {
-    async addVote() {
+    public getVotes(): Map<string, string[]> {
+        return new Map<string, string[]>();
+    }
+
+    public setVotes(id: string, votes: string[]) {
+        // TODO: setup the loading of persisted data
+    }
+
+    public getMaxVotes() {
+        return 0;
+    }
+    public async updateVoteCounts() {
 
     }
-    removeVote() {
-
-    }
 }
+

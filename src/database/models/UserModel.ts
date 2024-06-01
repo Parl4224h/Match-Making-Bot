@@ -26,8 +26,9 @@ export interface UserInt extends Document {
     requeue: boolean;
     frozen: boolean;
     region: Regions;
-    steamId: string;
+    steamID: string;
     muteUntil: number;
+    transferred: boolean;
 }
 
 export const UserSchema = new Schema({
@@ -50,8 +51,9 @@ export const UserSchema = new Schema({
         type: String,
         enum: ["NAE", "NAW", "EUE", "EUW", "APAC"]
     },
-    steamId: String,
+    steamID: String,
     muteUntil: Number,
+    transferred: Boolean,
 })
 
 export default model<UserInt>('users', UserSchema)

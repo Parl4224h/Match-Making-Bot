@@ -10,7 +10,7 @@ import discordTokens from "../../config/discordTokens";
 export const sync: Command = {
     data: new SlashCommandBuilder()
         .setName("sync")
-        .setDescription("Syncs commands with the server"),
+        .setDescription("Syncs commands with the serverUtil"),
     run: async (interaction) => {
         try {
             await interaction.deferReply({ephemeral: true});

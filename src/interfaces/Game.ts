@@ -3,12 +3,13 @@ export interface Vote {
     id: string;
 }
 
-export interface MapSet {
-    one: string;
-    two: string;
-    three: string;
-    four: string;
-    five: string;
-    six: string;
-    seven: string;
+export interface GameMap {
+    name: string;
+    ugc: string;
+    banned: boolean;
+    mapID: mapIndex;
+    imageURL: string;
 }
+
+export type mapIndex = '1' | '2' | '3' | '4' | '5' | '6' | '7';
+

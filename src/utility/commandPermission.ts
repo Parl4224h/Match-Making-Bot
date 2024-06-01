@@ -16,7 +16,7 @@ export const commandPermission = async (interaction: Interaction, command: Comma
             limited = true;
         }
     }
-    // Check if channel if allowed
+    // Check if channel is allowed
     if (command.allowedChannels) {
         if (!command.allowedChannels.includes(interaction.channelId!)) {
             channel = true;
@@ -40,7 +40,7 @@ export const commandPermission = async (interaction: Interaction, command: Comma
     } else {
         valid = true;
     }
-    return {valid: valid, limited: limited, channel: channel};
+    return {valid: valid, limited: limited, channel: channel, guild: false};
 }
 
 export const getChannels = (channels: string[]) => {

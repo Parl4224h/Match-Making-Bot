@@ -6,7 +6,7 @@ import {Data} from "../data";
 export interface Button {
     data: ButtonBuilder;
     run: (interaction: ButtonInteraction, data: Data) => Promise<void>;
-    id: string; // Id of button
+    id: string; // ID of button
     allowedUsers?: string[];
     allowedRoles?: string[];
     allowedChannels?: string[];

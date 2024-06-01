@@ -2,7 +2,7 @@ import {
     SlashCommandBuilder,
     SlashCommandSubcommandsOnlyBuilder,
 } from "@discordjs/builders";
-import {ChatInputCommandInteraction, SlashCommandSubcommandBuilder} from "discord.js";
+import {AutocompleteInteraction, ChatInputCommandInteraction, SlashCommandSubcommandBuilder} from "discord.js";
 import {Data} from "../data";
 import {RateLimiter} from "discord.js-rate-limiter";
 
@@ -16,6 +16,8 @@ export interface Command {
     allowedUsers?: string[];
     allowedChannels?: string[];
     limiter?: RateLimiter;
+    autocomplete?: (interaction: AutocompleteInteraction, data: Data) => Promise<void>;
+    autocompleteHandler?: (interaction: AutocompleteInteraction, data: Data) => Promise<void>;
 }
 
 export interface SubCommand {
@@ -26,4 +28,5 @@ export interface SubCommand {
     allowedUsers?: string[];
     allowedChannels?: string[];
     limiter?: RateLimiter;
+    autocomplete?: (interaction: AutocompleteInteraction, data: Data) => Promise<void>;
 }
