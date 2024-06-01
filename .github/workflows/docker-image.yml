@@ -30,4 +30,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/pcl-mm-bot:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mm-test-bot:latest
