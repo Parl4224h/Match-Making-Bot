@@ -22,12 +22,13 @@ import {restart} from "./moderator/restart";
 import {checkBan} from "./checkBan";
 import {dmOptions} from "./dmOptions";
 import {register} from "./register";
+import {ping} from "./ping";
 
 // List of all commands to be used
 const commandList: Command[] = [sync, checkDms, echo, prepare, // Admin commands
     _mod, _queue, categoryDelete, restart, // Moderator Commands
     games, graph, lfg, pingMe, pingPlayers, ratingChange, ready, setRequeue, stats, unready, // Queue commands
-    checkBan, dmOptions, register, // General commands
+    checkBan, dmOptions, register, ping // General commands
 ];
 let CommandMap: Collection<string, Command> = new Collection<string, Command>();
 
