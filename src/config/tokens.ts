@@ -25,8 +25,8 @@ const dev: TokensInt = {
     Servers: [],
     SubmitCooldown: 0,
     PingTime: 60,
-    PlayerCount: 2,
-    VoteTime: 3,
+    PlayerCount: 4,
+    VoteTime: 25,
     VoteSize: 7,
 };
 
