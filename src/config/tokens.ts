@@ -26,7 +26,7 @@ const dev: TokensInt = {
     SubmitCooldown: 0,
     PingTime: 60,
     PlayerCount: 4,
-    VoteTime: 25,
+    VoteTime: 30,
     VoteSize: 7,
 };
 
