@@ -1,8 +1,7 @@
 name: PMM Test deployment CI
 
 on:
-  pull_request_review:
-    types: [submitted]
+  push:
     branches: ["test-pmm"]
 
 
